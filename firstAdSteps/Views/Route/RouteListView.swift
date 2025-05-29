@@ -5,29 +5,28 @@ struct RouteListView: View {
     @State private var showingAddRoute = false
     
     var body: some View {
-        NavigationStack {
-            List {
-                ForEach(viewModel.filteredRoutes) { route in
-                    NavigationLink(destination: RouteDetailView(route: route)) {
-                        RouteListItem(route: route)
-                    }
-                }
-                .onDelete { indexSet in
-                    viewModel.deleteRoutes(at: indexSet)
+        List {
+            ForEach(viewModel.filteredRoutes) { route in
+                NavigationLink(destination: RouteDetailView(route: route)) {
+                    RouteListItem(route: route)
                 }
             }
-            .navigationTitle("Rotalar")
-            .toolbar {
-                Button {
-                    showingAddRoute = true
-                } label: {
-                    Image(systemName: "plus")
-                }
+            .onDelete { indexSet in
+                viewModel.deleteRoutes(at: indexSet)
             }
-            .sheet(isPresented: $showingAddRoute) {
-                NavigationStack {
-                    AddRouteView()
-                }
+        }
+        .listStyle(.plain)
+        // .navigationTitle("Rotalar")
+        .toolbar {
+            Button {
+                showingAddRoute = true
+            } label: {
+                Image(systemName: "plus")
+            }
+        }
+        .sheet(isPresented: $showingAddRoute) {
+            NavigationStack {
+                AddRouteView()
             }
         }
     }
@@ -60,6 +59,8 @@ struct RouteListItem: View {
 }
 
 #Preview {
-    RouteListView()
-        .environmentObject(RouteViewModel())
+    NavigationStack {
+        RouteListView()
+            .environmentObject(RouteViewModel())
+    }
 } 

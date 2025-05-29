@@ -89,6 +89,35 @@ extension Color {
     }
 }
 
+struct Theme {
+    // Ana Renkler
+    static let blue400 = Color(hex: "008cf5")    // Canlı Mavi
+    static let yellow400 = Color(hex: "fac400")  // Parlak Sarı
+    static let pink400 = Color(hex: "ff16a2")    // Neon Pembe
+    static let purple400 = Color(hex: "332a7c")  // Koyu Mor
+    static let red400 = Color(hex: "ff2b05")     // Kırmızı
+    
+    // İkincil Renkler
+    static let purple300 = Color(hex: "8675ff")  // Açık Mor
+    static let purple200 = Color(hex: "baccfd")  // Çok Açık Mor
+    static let green300 = Color(hex: "16dbcc")   // Canlı Turkuaz
+    static let yellow300 = Color(hex: "ffbb38")  // Altın Sarı
+    static let pink300 = Color(hex: "f44771")    // Parlak Pembe
+    static let pink200 = Color(hex: "fd7289")    // Açık Pembe
+    static let navy400 = Color(hex: "353e6c")    // Lacivert
+    static let green200 = Color(hex: "dcfaf8")   // Açık Su Yeşili
+    static let green400 = Color(hex: "00ab67")   // Yoğun Yeşil
+    static let yellow200 = Color(hex: "fff5d9")  // Çok Açık Sarı
+    static let blue500 = Color(hex: "2BCCFF")    // Açık Mavi
+
+    // Gri Tonları
+    static let gray600 = Color(hex: "4B5563")    // Koyu Gri
+    static let gray400 = Color(hex: "9CA3AF")    // Orta Gri
+    static let gray300 = Color(hex: "D1D5DB")    // Açık Gri
+    static let gray100 = Color(hex: "F5F5F5")    // Çok Açık Gri
+}
+
+
 // Ant Design stil bileşenleri
 struct AntCard: ViewModifier {
     func body(content: Content) -> some View {
