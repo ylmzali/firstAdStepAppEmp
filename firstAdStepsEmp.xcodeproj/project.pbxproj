@@ -45,7 +45,6 @@
 		C1B227912DE8823C003CE972 /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B2278C2DE8823C003CE972 /* UserProfileView.swift */; };
 		C1B227942DE88277003CE972 /* OrderTrackingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B227922DE88277003CE972 /* OrderTrackingView.swift */; };
 		C1B227A32DE8831C003CE972 /* AuthenticationFlowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B227952DE8831B003CE972 /* AuthenticationFlowView.swift */; };
-		C1B227A42DE8831C003CE972 /* LoginPageLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B227962DE8831B003CE972 /* LoginPageLayout.swift */; };
 		C1B227A52DE8831C003CE972 /* OTPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B227972DE8831B003CE972 /* OTPView.swift */; };
 		C1B227A62DE8831C003CE972 /* PhoneVerificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B227982DE8831B003CE972 /* PhoneVerificationView.swift */; };
 		C1B227A72DE8831C003CE972 /* RegisterFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B227992DE8831B003CE972 /* RegisterFormView.swift */; };
@@ -150,7 +149,6 @@
 		C1B2278C2DE8823C003CE972 /* UserProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
 		C1B227922DE88277003CE972 /* OrderTrackingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderTrackingView.swift; sourceTree = "<group>"; };
 		C1B227952DE8831B003CE972 /* AuthenticationFlowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationFlowView.swift; sourceTree = "<group>"; };
-		C1B227962DE8831B003CE972 /* LoginPageLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPageLayout.swift; sourceTree = "<group>"; };
 		C1B227972DE8831B003CE972 /* OTPView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTPView.swift; sourceTree = "<group>"; };
 		C1B227982DE8831B003CE972 /* PhoneVerificationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneVerificationView.swift; sourceTree = "<group>"; };
 		C1B227992DE8831B003CE972 /* RegisterFormView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterFormView.swift; sourceTree = "<group>"; };
@@ -337,7 +335,6 @@
 			isa = PBXGroup;
 			children = (
 				C1B227952DE8831B003CE972 /* AuthenticationFlowView.swift */,
-				C1B227962DE8831B003CE972 /* LoginPageLayout.swift */,
 				C1B227972DE8831B003CE972 /* OTPView.swift */,
 				C1B227982DE8831B003CE972 /* PhoneVerificationView.swift */,
 				C1B227992DE8831B003CE972 /* RegisterFormView.swift */,
@@ -705,7 +702,6 @@
 				C1B227B62DE88614003CE972 /* OrderSuccessView.swift in Sources */,
 				C1CB9B2E2DD8B35200F79297 /* RouteMapView.swift in Sources */,
 				C1B227CA2DE8AEC6003CE972 /* NotificationsAlertsView.swift in Sources */,
-				C1B227A42DE8831C003CE972 /* LoginPageLayout.swift in Sources */,
 				C1B227602DE74BC4003CE972 /* MainPageView.swift in Sources */,
 				C1321A872DE7181A00C68445 /* SearchPage.swift in Sources */,
 				C1B227832DE881A7003CE972 /* ReBrickInputStyle.swift in Sources */,

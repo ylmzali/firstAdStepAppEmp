@@ -5,6 +5,7 @@ struct RouteListView: View {
     @State private var showingAddRoute = false
     
     var body: some View {
+        
         List {
             ForEach(viewModel.filteredRoutes) { route in
                 NavigationLink(destination: RouteDetailView(route: route)) {
@@ -16,7 +17,7 @@ struct RouteListView: View {
             }
         }
         .listStyle(.plain)
-        // .navigationTitle("Rotalar")
+        .navigationTitle("Rotalar")
         .toolbar {
             Button {
                 showingAddRoute = true
@@ -29,6 +30,7 @@ struct RouteListView: View {
                 AddRouteView()
             }
         }
+        
     }
 }
 

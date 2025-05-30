@@ -8,9 +8,15 @@ import SwiftUI
 
 @main
 struct firstAdStepsApp: App {
+    @StateObject var routeViewModel = RouteViewModel()
+    @StateObject var userViewModel = UserProfileViewViewModel()
+
     var body: some Scene {
         WindowGroup {
             AppFlowView()
+                .environmentObject(routeViewModel)
+                .environmentObject(userViewModel)
+
         }
     }
 }

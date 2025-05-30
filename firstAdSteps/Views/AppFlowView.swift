@@ -107,4 +107,6 @@ struct NotificationPermissionView: View {
 
 #Preview {
     AppFlowView()
+        .environmentObject(RouteViewModel())
+        .environmentObject(UserProfileViewViewModel())
 }

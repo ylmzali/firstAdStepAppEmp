@@ -150,21 +150,25 @@ struct AddRouteView: View {
             .padding(AntSpacing.md)
         }
         .background(AntColors.background)
+        /*
         .gesture(
             TapGesture()
                 .onEnded { _ in
                     hideKeyboard()
                 }
         )
+         */
         .navigationTitle("Yeni Rota")
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
+            /*
             ToolbarItem(placement: .navigationBarLeading) {
                 Button("Vazgeç") {
                     dismiss()
                 }
                 .foregroundColor(AntColors.text)
             }
+             */
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button("Kaydet") {
                     saveRoute()

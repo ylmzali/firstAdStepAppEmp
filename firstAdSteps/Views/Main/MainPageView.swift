@@ -1,7 +1,8 @@
 import SwiftUI
 
 struct MainPageView: View {
-    @StateObject private var routeViewModel = RouteViewModel()
+    @EnvironmentObject var routeViewModel: RouteViewModel
+
     @State private var selectedTab = 0
     @State private var animateStats = false
     
@@ -9,26 +10,40 @@ struct MainPageView: View {
         NavigationStack {
             ZStack {
                 // Arka plan gradyanı
+                /*
                 LinearGradient(
                     gradient: Gradient(colors: [Color.blue.opacity(0.1), Color.white]),
                     startPoint: .top,
                     endPoint: .bottom
                 )
                 .ignoresSafeArea()
+                */
+                
 
+                
                 ScrollView {
-                    VStack(spacing: 0) {
+                    VStack(spacing: 15) {
                         
                         HomeHeaderSection()
                         ReservationStatusSummaryView()
-                        AdSpacesListView()
-                        AdPerformanceStatsView()
-                        AdRouteProofView()
-                        QuickAccessShortcutsView()
+
+                        // AdSpacesListView()
+                        // AdPerformanceStatsView()
+                        // AdRouteProofView()
+                        // QuickAccessShortcutsView()
                         
                     }
+                    .background(
+                        LinearGradient(
+                            gradient: Gradient(colors: [Color.blue.opacity(0.2), Color.white]),
+                            startPoint: .top,
+                            endPoint: .bottom
+                        )
+                    )
                 }
             }
+            .ignoresSafeArea(.all)
+
         }
         .onAppear {
             withAnimation(.spring(response: 0.6, dampingFraction: 0.8)) {
@@ -105,4 +120,6 @@ struct EnhancedQuickAccessCard: View {
 
 #Preview {
     MainPageView()
+        .environmentObject(RouteViewModel())
+        .environmentObject(UserProfileViewViewModel())
 }

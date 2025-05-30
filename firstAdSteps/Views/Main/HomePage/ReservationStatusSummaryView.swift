@@ -5,10 +5,16 @@ struct ReservationStatusSummaryView: View {
     var activeCount: Int = 2
     var upcomingCount: Int = 1
     var completedCount: Int = 5
-    var onAddReservation: (() -> Void)? = nil
     
+    @State private var showAddRoute: Bool = false
+    @State private var showRouteList: Bool = false
+
     var body: some View {
-        VStack(alignment: .leading, spacing: 16) {
+        VStack(alignment: .leading, spacing: 16)
+        {
+
+            
+            
             Text("Rezervasyon Durumu")
                 .font(.headline)
                 .padding(.leading)
@@ -18,21 +24,58 @@ struct ReservationStatusSummaryView: View {
                 ReservationStatusCard(title: "Tamamlanan", count: completedCount, color: .green, icon: "checkmark.circle.fill")
             }
             .padding(.horizontal)
-            Button(action: {
-                onAddReservation?()
-            }) {
-                HStack {
-                    Image(systemName: "plus.circle.fill")
-                    Text("Yeni Rezervasyon Ekle")
-                        .fontWeight(.semibold)
-                }
-                .padding()
-                .frame(maxWidth: .infinity)
-                .background(Color.blue.opacity(0.1))
-                .foregroundColor(.blue)
-                .cornerRadius(12)
+            
+            NavigationLink(destination: AddRouteView(), isActive: $showAddRoute) {
+                EmptyView()
             }
-            .padding(.horizontal)
+
+            VStack(alignment: .leading, spacing: 8)
+            {
+                
+                Button(action: {
+                    showAddRoute = true
+                }) {
+                    HStack {
+                        Image(systemName: "plus.circle.fill")
+                        Text("Yeni Rezervasyon Ekle")
+                            .fontWeight(.semibold)
+                    }
+                    .padding()
+                    .frame(maxWidth: .infinity)
+                    .background(Color.blue.opacity(0.1))
+                    .foregroundColor(.blue)
+                    .cornerRadius(12)
+                }
+                /*
+                .fullScreenCover(isPresented: $showAddRoute) {
+                    AddRouteView()
+                }
+                 */
+                .padding(.horizontal)
+                
+                
+                
+                
+                NavigationLink(destination: RouteListView(), isActive: $showRouteList) {
+                    EmptyView()
+                }
+                
+                Button(action: {
+                    showRouteList = true
+                }) {
+                    HStack {
+                        Image(systemName: "checkmark.rectangle.stack.fill")
+                        Text("Rezervasyonlarım")
+                            .fontWeight(.semibold)
+                    }
+                    .padding()
+                    .frame(maxWidth: .infinity)
+                    .background(Color.blue.opacity(1))
+                    .foregroundColor(.white)
+                    .cornerRadius(12)
+                }
+                .padding(.horizontal)
+            }
         }
         .padding(.vertical)
     }
@@ -68,4 +111,4 @@ struct ReservationStatusCard: View {
 
 #Preview {
     ReservationStatusSummaryView()
-} 
+}

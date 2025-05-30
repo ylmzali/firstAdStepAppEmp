@@ -26,7 +26,7 @@ struct TabBarText: View {
 struct MainTabBar: View {
     @State private var selectedTab = 0
     @StateObject private var cartManager = CartManager.shared
-    
+
     var body: some View {
         ZStack(alignment: .bottom) {
             TabView(selection: $selectedTab) {
@@ -60,6 +60,7 @@ struct MainTabBar: View {
             }
             .tint(.black)
             
+            
             if cartManager.itemCount > 0 {
                 GeometryReader { geometry in
                     Text("\(cartManager.itemCount)")
@@ -79,4 +80,6 @@ struct MainTabBar: View {
 
 #Preview {
     MainTabBar()
+        .environmentObject(RouteViewModel())
+        .environmentObject(UserProfileViewViewModel())
 } 
